@@ -1,0 +1,9 @@
+<docblock xmlns="http://xml.phpdox.net/src">
+    <description compact="Class Source"/>
+    <package value="Src2"/>
+    <property value="bool $SomeProperty"/>
+    <property value="int OtherProperty"/>
+    <property value="@static bool $SomeStaticProperty"/>
+    <method value="void SomeMethod"/>
+    <method value="@static void SomeStaticMethod"/>
+</docblock>

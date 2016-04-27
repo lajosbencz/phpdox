@@ -40,6 +40,7 @@ namespace TheSeer\phpDox\Collector\Backend {
     use TheSeer\phpDox\Collector\AbstractVariableObject;
     use TheSeer\phpDox\Collector\InlineComment;
     use TheSeer\phpDox\Collector\MethodObject;
+    use TheSeer\phpDox\DocBlock\GenericElement;
     use TheSeer\phpDox\DocBlock\Parser as DocBlockParser;
     use PhpParser\NodeVisitorAbstract;
     use PhpParser\Node\Stmt as NodeType;

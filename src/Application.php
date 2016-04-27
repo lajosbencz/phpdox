@@ -43,6 +43,8 @@ namespace TheSeer\phpDox {
      * @copyright  Arne Blankerts <arne@blankerts.de>, All rights reserved.
      * @license    BSD License
      * @link       http://phpDox.net
+     * @property   string $SomeProperty
+     * @property @static string $SomeStaticProperty
      */
     class Application {
 

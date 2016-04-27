@@ -201,6 +201,9 @@ namespace TheSeer\phpDox\Collector {
          */
         public function setDocBlock(DocBlock $docblock) {
             $docNode = $docblock->asDom($this->dom);
+            foreach($docNode->query("phpdox:property") as $property) {
+                var_dump($property->getAttribute('value'));
+            }
             $this->rootNode->appendChild($docNode);
         }
 

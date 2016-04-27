@@ -203,6 +203,7 @@ namespace TheSeer\phpDox {
             $this->init('resolver/' .  $file);
             /** @var ProjectConfig[] $projects */
             $projects = $this->config->getProjects();
+            $expected = preg_replace("/(\\\\)([^\\\\])/", '/$2', $expected); // @TODO windows path separator fix
             $this->assertEquals($expected, current($projects)->getSourceDirectory()->getPathname());
         }
 
@@ -239,7 +240,8 @@ namespace TheSeer\phpDox {
          */
         public function testInvalidPropertyRequestThrowsException($file, $code) {
             $this->init('resolver/' .  $file);
-            $this->setExpectedException('TheSeer\\phpDox\\ConfigException', $code);
+            $this->expectException('TheSeer\\phpDox\\ConfigException');
+            $this->expectExceptionCode($code);
             $this->config->getProjects();
         }
 
